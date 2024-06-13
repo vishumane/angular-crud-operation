@@ -1,0 +1,7 @@
+<div *ngIf="student">
+  <p>Name: {{student.name}}</p>
+  <p>Id: {{student.id}}</p>
+  <p>Gender: {{student.gender}}</p>
+  <p>Address: {{student.address}}</p>
+  <a [routerLink]="['/student-add', student.id]">Edit</a>
+</div>

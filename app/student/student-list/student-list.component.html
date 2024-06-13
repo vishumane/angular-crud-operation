@@ -1,0 +1,11 @@
+<ul *ngIf="studentList.length>0">
+  <li *ngFor="let student of studentList">
+    <a [routerLink]="['/student',student.id]">
+    <p class="w-50">name: {{student.name}}</p>
+    <p class="w-50 text-right">Id: {{student.id}}</p>
+    <p class="w-50">Gender: {{student.gender}}</p>
+    <p class="w-50 text-right">Address: {{student.address}}</p>
+    </a>
+  </li>
+</ul>
+<h3 *ngIf="studentList.length==0" class="text-center">Students Not Found</h3>
